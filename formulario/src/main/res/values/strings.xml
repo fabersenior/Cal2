@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">formulario</string>
+    <string name="saludar">Esto es un saludo</string>
+    <string-array name="citys_array">
+        <item>Medellin</item>
+        <item>Bogota</item>
+        <item>Cartagena</item>
+        <item>Barranquilla</item>
+        <item>Otra</item>
+    </string-array>
+</resources>
