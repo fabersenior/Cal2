@@ -69,48 +69,73 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:layout_gravity="center"
         android:text="Ingrese Datos"/>
 
-    <EditText
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:id="@+id/eLado"
-        android:hint="Lado"
-        />
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:hint="Base"
-        android:id="@+id/eBase"
-        />
-    <EditText
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:inputType="number"
-    android:hint="Altura"
-    android:id="@+id/eAltura"
-    />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:id="@+id/eLado"
+                android:hint="Lado"
+                />
 
-    <EditText
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="Base"
+                android:id="@+id/eBase"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:hint="Radio"
-        android:id="@+id/eRadio"
-        />
+        android:orientation="horizontal">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:hint="Altura"
+            android:id="@+id/eAltura"
+            />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:hint="Radio"
+            android:id="@+id/eRadio"
+            />
+
+    </LinearLayout>
+
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Calcular Area"
-        android:textSize="30sp"
+        android:textSize="10sp"
         android:onClick="onButtonClicked"
-        android:background="@color/colorPrimary"/>
+        />
 
     <TextView
         android:layout_width="match_parent"
