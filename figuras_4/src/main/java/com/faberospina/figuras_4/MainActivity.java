@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
             resultado.setText("El area del Triangulo es: " + Double.toString((double)(2*Math.PI*n1*n1 )));
         }
 
-        if(lado.length()==0 || base.length()==0 && sel ==4){
+        if((lado.length()==0 || base.length()==0) && sel ==4){
             //resultado.setText("Campos Vacios");
             Toast.makeText(this,"Campo de lado Vacio"
                     , Toast.LENGTH_SHORT).show();
