@@ -45,16 +45,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.Rcuadro:
                 if (checked){
                     lado.setVisibility(View.VISIBLE);
-                    if(lado.length()==0 ){
-                        //resultado.setText("Campos Vacios");
-                        Toast.makeText(this,"Campo de Lado Vacio"
-                                , Toast.LENGTH_SHORT).show();
-                    }else {
-                        int n1 = Integer.parseInt(lado.getText().toString());
-                        resultado.setText("El area del cuadrado es: " + Integer.toString(n1*n1));
-                    }
-
-
                 }
                // lado.setVisibility(View.INVISIBLE);
                     // Pirates are the best
@@ -63,57 +53,23 @@ public class MainActivity extends AppCompatActivity {
                 if (checked){
                     base.setVisibility(View.VISIBLE);
                     altura.setVisibility(View.VISIBLE);
-                    if(base.length()==0 || altura.length()==0){
-                        //resultado.setText("Campos Vacios");
-                        Toast.makeText(this,"Campo de base o altura Vacio"
-                                , Toast.LENGTH_SHORT).show();
-                    }else {
-                        int n1 = Integer.parseInt(base.getText().toString());
-                        int n2 = Integer.parseInt((altura.getText().toString()));
-                        resultado.setText("El area del Triangulo es: " + Double.toString((double)(n1*n2)/2 ));
-                    }
-
 
                 }
 
-
-                    // Ninjas rule
                     break;
 
             case R.id.Rcircle:
                 if (checked){
                     radio.setVisibility(View.VISIBLE);
 
-                    if(radio.length()==0 ){
-                        //resultado.setText("Campos Vacios");
-                        Toast.makeText(this,"Campo de Radio Vacio"
-                                , Toast.LENGTH_SHORT).show();
-                    }else {
-                        int n1 = Integer.parseInt(base.getText().toString());
-                        resultado.setText("El area del Triangulo es: " + Double.toString((double)(2*Math.PI*n1*n1 )));
-                    }
-
-
                 }
 
-                // Ninjas rule
                 break;
 
             case R.id.Rsquare:
                 if (checked){
                     lado.setVisibility(View.VISIBLE);
                     base.setVisibility(View.VISIBLE);
-
-                    if(lado.length()==0 || base.length()==0 ){
-                        //resultado.setText("Campos Vacios");
-                        Toast.makeText(this,"Campo de lado Vacio"
-                                , Toast.LENGTH_SHORT).show();
-                    }else {
-                        int n1 = Integer.parseInt(base.getText().toString());
-                        int n2 = Integer.parseInt(lado.getText().toString());
-                        resultado.setText("El area del Rectangulo es: " + Double.toString((double)(n1*n2 )));
-                    }
-
 
                 }
 
@@ -125,5 +81,46 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
         }
+    }
+
+    public  void onButtonClicked(View view){
+
+        if(lado.length()==0 ){
+            //resultado.setText("Campos Vacios");
+            Toast.makeText(this,"Campo de Lado Vacio"
+                    , Toast.LENGTH_SHORT).show();
+        }else {
+            int n1 = Integer.parseInt(lado.getText().toString());
+            resultado.setText("El area del cuadrado es: " + Integer.toString(n1*n1));
+        }
+
+        if(base.length()==0 || altura.length()==0){
+            //resultado.setText("Campos Vacios");
+            Toast.makeText(this,"Campo de base o altura Vacio"
+                    , Toast.LENGTH_SHORT).show();
+        }else {
+            int n1 = Integer.parseInt(base.getText().toString());
+            int n2 = Integer.parseInt((altura.getText().toString()));
+            resultado.setText("El area del Triangulo es: " + Double.toString((double)(n1*n2)/2 ));
+        }
+        if(radio.length()==0 ){
+            //resultado.setText("Campos Vacios");
+            Toast.makeText(this,"Campo de Radio Vacio"
+                    , Toast.LENGTH_SHORT).show();
+        }else {
+            int n1 = Integer.parseInt(base.getText().toString());
+            resultado.setText("El area del Triangulo es: " + Double.toString((double)(2*Math.PI*n1*n1 )));
+        }
+
+        if(lado.length()==0 || base.length()==0 ){
+            //resultado.setText("Campos Vacios");
+            Toast.makeText(this,"Campo de lado Vacio"
+                    , Toast.LENGTH_SHORT).show();
+        }else {
+            int n1 = Integer.parseInt(base.getText().toString());
+            int n2 = Integer.parseInt(lado.getText().toString());
+            resultado.setText("El area del Rectangulo es: " + Double.toString((double)(n1*n2 )));
+        }
+
     }
 }
